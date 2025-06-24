@@ -2,27 +2,18 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard - Fábrica IA</title>
-  <link href="assets/css/style.css" rel="stylesheet"/>
-  <script defer src="assets/js/dashboard-ia.js"></script>
+  <title>Dashboard IA</title>
+  <script defer src="assets/js/auth-check.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Mundo das Fantasias - IA Dashboard</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="pages/estoque.html">Estoque</a>
-      <a href="pages/pedidos.html">Pedidos</a>
-      <a href="pages/producao.html">Produção</a>
-      <a href="pages/fornecedores.html">Fornecedores</a>
-      <a href="pages/relatorios.html">Relatórios</a>
-      <a href="pages/chat-ia.html">Chat IA</a>
-    </nav>
-  </header>
-  <main>
-    <h2>Resumo Inteligente da Produção</h2>
-    <ul id="ia-dashboard"></ul>
-  </main>
+  <h1>Bem-vindo à Fábrica IA</h1>
+  <button onclick="logout()">Sair</button>
+  <script>
+    function logout() {
+      firebase.auth().signOut().then(() => {
+        window.location.href = 'login.html';
+      });
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - Fábrica IA</title>
+</head>
+<body>
+  <h2>Cadastro</h2>
+  <input type="email" id="email" placeholder="E-mail"><br>
+  <input type="password" id="senha" placeholder="Senha"><br>
+  <button onclick="cadastrar()">Cadastrar</button>
+  <p>Já tem conta? <a href="login.html">Faça login</a></p>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="assets/js/firebase-config.js"></script>
+  <script>
+    function cadastrar() {
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+      firebase.auth().createUserWithEmailAndPassword(email, senha)
+        .then(() => window.location.href = 'index.html')
+        .catch(e => alert("Erro: " + e.message));
+    }
+  </script>
+</body>
+</html>
