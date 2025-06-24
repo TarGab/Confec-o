@@ -1,12 +1,13 @@
 body {
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
   margin: 0;
   padding: 0;
 }
 header {
-  background: #333;
-  color: #fff;
-  padding: 10px;
+  background: #1a1a1a;
+  color: white;
+  padding: 15px;
 }
 nav a {
   margin-right: 10px;
