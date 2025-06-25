@@ -1,0 +1,1 @@
+// Configuração Firebase (substituir pelas credenciais reais)

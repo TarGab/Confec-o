@@ -1,0 +1,1 @@
+// Integração com OpenAI usando API Key
